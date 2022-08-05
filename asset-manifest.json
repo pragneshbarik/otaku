@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/otaku/static/css/main.4a6f6b06.css",
+    "main.js": "/otaku/static/js/main.1b6c7226.js",
+    "static/js/787.0b1bda67.chunk.js": "/otaku/static/js/787.0b1bda67.chunk.js",
+    "static/media/bg2.jpg": "/otaku/static/media/bg2.343966af57d7e4f29b83.jpg",
+    "static/media/bg3.jpg": "/otaku/static/media/bg3.83d2af80de76b16ae9bb.jpg",
+    "static/media/bg4.jpg": "/otaku/static/media/bg4.efc4f7ebcfa772d368dc.jpg",
+    "static/media/bg9.jpg": "/otaku/static/media/bg9.30431af4ed7b9bcab1d9.jpg",
+    "static/media/bg11.jpg": "/otaku/static/media/bg11.630c7944ed5ab6abe90b.jpg",
+    "static/media/bg5.jpg": "/otaku/static/media/bg5.9fda398fde4abc90c9ee.jpg",
+    "static/media/bg8.jpg": "/otaku/static/media/bg8.9fda398fde4abc90c9ee.jpg",
+    "static/media/bg13.jpg": "/otaku/static/media/bg13.8e7247fb0241fee85943.jpg",
+    "static/media/bg6.jpg": "/otaku/static/media/bg6.f2865e9743cd8567e0e7.jpg",
+    "static/media/bg7.jpg": "/otaku/static/media/bg7.d8fc2bd6622dead1d37e.jpg",
+    "static/media/bg1.jpg": "/otaku/static/media/bg1.8252ce1483b89998e4c1.jpg",
+    "static/media/bg12.jpg": "/otaku/static/media/bg12.577aa144f4f74d2fab79.jpg",
+    "index.html": "/otaku/index.html",
+    "main.4a6f6b06.css.map": "/otaku/static/css/main.4a6f6b06.css.map",
+    "main.1b6c7226.js.map": "/otaku/static/js/main.1b6c7226.js.map",
+    "787.0b1bda67.chunk.js.map": "/otaku/static/js/787.0b1bda67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a6f6b06.css",
+    "static/js/main.1b6c7226.js"
+  ]
+}
