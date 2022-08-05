@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/otaku/static/css/main.4a6f6b06.css",
-    "main.js": "/otaku/static/js/main.1e3c6097.js",
+    "main.js": "/otaku/static/js/main.c47d6bab.js",
     "static/js/787.0b1bda67.chunk.js": "/otaku/static/js/787.0b1bda67.chunk.js",
     "static/media/bg2.jpg": "/otaku/static/media/bg2.343966af57d7e4f29b83.jpg",
     "static/media/bg3.jpg": "/otaku/static/media/bg3.83d2af80de76b16ae9bb.jpg",
@@ -17,11 +17,11 @@
     "static/media/bg12.jpg": "/otaku/static/media/bg12.577aa144f4f74d2fab79.jpg",
     "index.html": "/otaku/index.html",
     "main.4a6f6b06.css.map": "/otaku/static/css/main.4a6f6b06.css.map",
-    "main.1e3c6097.js.map": "/otaku/static/js/main.1e3c6097.js.map",
+    "main.c47d6bab.js.map": "/otaku/static/js/main.c47d6bab.js.map",
     "787.0b1bda67.chunk.js.map": "/otaku/static/js/787.0b1bda67.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a6f6b06.css",
-    "static/js/main.1e3c6097.js"
+    "static/js/main.c47d6bab.js"
   ]
 }
