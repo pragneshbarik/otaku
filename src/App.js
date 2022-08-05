@@ -14,19 +14,26 @@ import bg12 from './images/bg12.jpg'
 import bg13 from './images/bg13.jpg'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { Box } from '@mui/system';
-import Paper from '@mui/material/Paper';
-import AnimeCard from './components/AnimeCard';
 import AnimeCardGrid from './components/AnimeCardGrid';
 import { Typography } from '@mui/material';
 import Counter from './components/Counter';
-import { useEffect, useState } from 'react';
-import CardState from './components/CardStates/cardState';
+import { useContext, useEffect, useState } from 'react';
+import CardContext from './components/CardStates/cardContext';
 import Footer from './components/Footer';
 
 
 function App() {
   const [image, setImage] = useState("")
   const bgs = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg11, bg12, bg13]
+  const {data, updataData} = useContext(CardContext)
+  const [toRender, setToRender] = useState(0)
+
+  useEffect(()=>{
+    if(data) {
+      setToRender(1)
+    }
+  }, [data])
+
 
   useEffect(()=>{
     let randomid = Math.floor(Math.random()*12);
@@ -35,12 +42,11 @@ function App() {
   
   return (
     <>
-    <CardState>
     <div style={{
       background:`linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%), url(${image})`,
       backgroundRepeat  : 'no-repeat',
       backgroundSize: 'cover',
-      height:'100vh'}}>
+      height:'100%'}}>
    
     
     <NavBar />
@@ -49,17 +55,16 @@ function App() {
     <Counter />
     <Box sx={{mt:'50px'}}>
     <Search />
-    <Box sx={{color:'white', textAlign:"center", mt:'20vh' }}>
+    {toRender && <Box sx={{color:'white', textAlign:"center", mt:'20vh' }}>
     <KeyboardDoubleArrowDownIcon sx={{fontSize:"4rem", opacity:"0.3"}} />
-    </Box>
+    </Box>}
     </Box>
     </div>
     <div style={{backgroundColor:'black'}}>
-    <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", mt:'0%'}}>Recommendations</Typography>
+    {toRender && <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", pt:'20%', pb:"5%"}}>Recommendations</Typography>}
     <AnimeCardGrid />
     </div>
     <Footer />
-    </CardState>
     </>
   );
 }
