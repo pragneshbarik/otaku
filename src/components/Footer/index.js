@@ -10,7 +10,12 @@ import { Link } from '@mui/material';
 export default function Footer () {
     return (
         
-        <Box sx={{bgcolor:'black', p:'40px', color:"white", fontFamily:'IBM Plex Mono'}}>
+        <Box sx={{
+            flexShrink: 0,
+            backgroundColor:"black",
+            pb:'5px', pt:'25px', 
+            color:"white", 
+            fontFamily:'IBM Plex Mono'}}>
                 <Grid container
                 justifyContent="center"
                 spacing={4}

@@ -37,7 +37,7 @@ export default function AnimeCardGrid() {
                     >
 
                  <Masonry gutter="1rem">   
-                    {toRender && data.data.map(item => <AnimeCard key={item.uid} title={item.title} img={item.img_url} rating={item.score} members={item.members} genres={item.genre}/>)}
+                    {toRender && data.data.map(item => <AnimeCard key={item.uid} title={item.title} img={item.img_url} rating={item.score} members={item.members} genres={item.genre} synopsis={item.synopsis}/>)}
                     </Masonry>
                     </ResponsiveMasonry>
                 </Grid>

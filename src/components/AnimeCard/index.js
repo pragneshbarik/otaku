@@ -42,7 +42,7 @@ export default function AnimeCard(props) {
         component="img"
         height="400"
         image={props.img}
-        alt="green iguana"
+        alt="anime_image"
       />
       <CardContent >
         <Grid container
@@ -69,10 +69,25 @@ export default function AnimeCard(props) {
         <Box sx={{fontSize:'0.8rem', mt:'4px', ml:'2px', fontWeight:'200', opacity:"0.5"}}>{nFormatter(parseInt(props.members), 1)}</Box>
         </Stack>
         </Stack>
-        <Divider sx={{bgcolor:"#3E3B46", mt:'20px'}}/>
+        <Divider sx={{bgcolor:"#3E3B46", mt:'10px'}}/>
+
+        <Stack direction="column" 
+          justifyContent="space-between"
+        sx={{mx:"3px", mt:"7px"}}>
+          
+        <Typography sx={{fontFamily:"IBM Plex Mono", ml:'3px', opacity:'0.5', fontSize:"0.9rem", fontWeight:"200", mb:'10px'}}>SYNOPSIS</Typography>
+        
+        <Box sx={{fontWeight:'200', ml:'4px', fontSize:".85rem", opacity:'0.8'}}>{props.synopsis.split('.')[0] + '.'}</Box>
+        <Stack direction="column"
+        alignItems="flex-end"
+        >
+        </Stack>
+        </Stack>
+        
+        <Divider sx={{bgcolor:"#3E3B46", mt:'10px'}}/>
 
         <Box sx={{color:"white", mt:'10px'}}>
-          {props.genres.map((genre)=><Chip size="medium" label={genre} sx={{fontSize:'0.9rem', mt:'6px', opacity:'0.8', fontFamily:"Poppins", fontWeight:'300', ml:'5px', bgcolor:'#2E2B36', color:"#a1a1a1"}}/>)}
+          {props.genres.map((genre)=><Chip size="medium" label={genre} sx={{fontSize:'0.85rem', mt:'5px', opacity:'0.9', fontFamily:"IBM Plex Mono", fontWeight:'300', ml:'4px', bgcolor:'#2E2B36', color:"#a2a2a2"}}/>)}
       </Box>
       </CardContent>
       <CardActions>

@@ -43,28 +43,38 @@ function App() {
   return (
     <>
     <div style={{
-      background:`linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%), url(${image})`,
-      backgroundRepeat  : 'no-repeat',
-      backgroundSize: 'cover',
-      height:'100%'}}>
-   
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100vh',
+    }} >
+      <div style={{
+        background:`linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%), url(${image})`,
+        backgroundColor:'black',
+        backgroundRepeat  : 'no-repeat',
+        backgroundSize: 'cover',
+        height:'100%'}}>
     
-    <NavBar />
-    <Typography variant='h1' sx={{color:'white', mx:'auto', mt:{xs:'10rem',sm:'30px'}, textAlign:"center", fontFamily:"Poppins"}}>otaku</Typography>
-    <Typography variant='h6' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", mb:'1%', fontWeight:"200"}}>Your personal Anime Recommender.</Typography>
-    <Counter />
-    <Box sx={{mt:'50px'}}>
-    <Search />
-    {toRender && <Box sx={{color:'white', textAlign:"center", mt:'20vh' }}>
-    <KeyboardDoubleArrowDownIcon sx={{fontSize:"4rem", opacity:"0.3"}} />
-    </Box>}
-    </Box>
+      
+        <NavBar />
+        <Typography variant='h1' sx={{color:'white', mx:'auto', mt:{xs:'10rem',sm:'30px'}, textAlign:"center", fontFamily:"Poppins"}}>otaku</Typography>
+        <Typography variant='h6' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", mb:'1%', fontWeight:"200"}}>Your personal Anime Recommender.</Typography>
+        <Counter />
+        <Box sx={{mt:'50px'}}>
+          <Search />
+          
+          {toRender && 
+          <Box sx={{color:'white', textAlign:"center", mt:'20vh' }}>
+          <KeyboardDoubleArrowDownIcon sx={{fontSize:"4rem", opacity:"0.3"}} />
+          </Box>}
+        </Box>
+        </div>
+      <div style={{backgroundColor:'black'}}>
+        {toRender && <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", pt:'20%', pb:"5%"}}>Recommendations</Typography>}
+        <AnimeCardGrid />
+        
+      </div>
+      <Footer />
     </div>
-    <div style={{backgroundColor:'black'}}>
-    {toRender && <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", pt:'20%', pb:"5%"}}>Recommendations</Typography>}
-    <AnimeCardGrid />
-    </div>
-    <Footer />
     </>
   );
 }

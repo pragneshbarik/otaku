@@ -18,7 +18,8 @@ const StyledAutocomplete = styled(Autocomplete)({
   "& .MuiAutocomplete-inputRoot": {
     fontSize: "1.3rem",
     color: "white",
-    backgroundColor: "rgba(26,24,38, 0.8)",
+    fontFamily:"IBM Plex Mono",
+    backgroundColor: "rgba(30,27,38, 0.5)",
     opacity:"1",
     borderRadius:"10px",
     // This matches the specificity of the default styles at https://github.com/mui-org/material-ui/blob/v4.11.3/packages/material-ui-lab/src/Autocomplete/Autocomplete.js#L90
