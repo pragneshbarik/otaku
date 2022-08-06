@@ -22,10 +22,11 @@ import CardContext from './components/CardStates/cardContext';
 import Footer from './components/Footer';
 
 
+
 function App() {
   const [image, setImage] = useState("")
   const bgs = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg11, bg12, bg13]
-  const {data, updataData} = useContext(CardContext)
+  const data = useContext(CardContext).data
   const [toRender, setToRender] = useState(0)
 
   useEffect(()=>{
@@ -42,11 +43,10 @@ function App() {
   
   return (
     <>
-    <div style={{
+    <Box sx={{
       display: 'flex',
       flexDirection: 'column',
-      height: '100vh',
-    }} >
+    }} height={{xs:"1080px", md:"100vh"}}>
       <div style={{
         background:`linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%), url(${image})`,
         backgroundColor:'black',
@@ -62,19 +62,20 @@ function App() {
         <Box sx={{mt:'50px'}}>
           <Search />
           
-          {toRender && 
+          {(!!toRender) ? 
           <Box sx={{color:'white', textAlign:"center", mt:'20vh' }}>
           <KeyboardDoubleArrowDownIcon sx={{fontSize:"4rem", opacity:"0.3"}} />
-          </Box>}
+          </Box> : null}
         </Box>
         </div>
       <div style={{backgroundColor:'black'}}>
-        {toRender && <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", pt:'20%', pb:"5%"}}>Recommendations</Typography>}
+        {(!!toRender) ? <Typography variant='h4' sx={{color:'white', textAlign:"center", fontFamily:"Poppins", pt:'20%', pb:"5%"}}>Recommendations</Typography> : null}
+        
         <AnimeCardGrid />
         
       </div>
       <Footer />
-    </div>
+    </Box>
     </>
   );
 }

@@ -44,7 +44,7 @@ const StyledAutocomplete = styled(Autocomplete)({
 export default function Search() {
   const [src, setSrc] = useState("")
   const [titles, setTitles] = useState([])
-  const {data, updateData} = useContext(CardContext)
+  const updateData = useContext(CardContext).updateData
   
   useEffect(()=>{
     const fetch_url = 'https://otaku-backend.herokuapp.com/search/' + src

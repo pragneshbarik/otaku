@@ -11,8 +11,9 @@ export default function Footer () {
     return (
         
         <Box sx={{
-            flexShrink: 0,
+            position:"relative",
             backgroundColor:"black",
+            mb:"-100px",
             pb:'5px', pt:'25px', 
             color:"white", 
             fontFamily:'IBM Plex Mono'}}>
