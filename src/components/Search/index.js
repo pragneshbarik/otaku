@@ -44,7 +44,7 @@ export default function Search() {
   const updateData = useContext(CardContext).updateData;
 
   useEffect(() => {
-    const fetch_url = "https://otaku-backend.herokuapp.com/search/" + src;
+    const fetch_url = "https://rich-tan-kitten-slip.cyclic.app/search/" + src;
     // const fetch_url = 'http://localhost:5000/search/' + src
     axios
       .get(fetch_url)
@@ -56,7 +56,8 @@ export default function Search() {
     const uid = value.split(":")[0];
 
     // const fetch_url = "http://localhost:5000/rec/" + uid + "/20"
-    const fetch_url = "https://otaku-backend.herokuapp.com/rec/" + uid + "/52";
+    const fetch_url =
+      "https://rich-tan-kitten-slip.cyclic.app/rec/" + uid + "/52";
     axios.get(fetch_url).then((res) => {
       updateData(res);
     });
